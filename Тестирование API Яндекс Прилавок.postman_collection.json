@@ -1,0 +1,1309 @@
+{
+	"info": {
+		"_postman_id": "39140cd0-101d-4797-9cd1-2e3ad6ad3851",
+		"name": "API Яндекс Прилавок",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25952209",
+		"_collection_link": "https://interstellar-sunset-743966.postman.co/workspace/117c4ba9-a002-4f5c-8328-4dce33f3e5a6/collection/25952209-39140cd0-101d-4797-9cd1-2e3ad6ad3851?action=share&source=collection_link&creator=25952209"
+	},
+	"item": [
+		{
+			"name": "Допустимое кол-во продуктов в заказе цена доставки = 43 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>9</productsCount>\r\n    <productsWeight>2,9</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Допустимое минимальное кол-во продуктов в заказе с ценой доставки = 23 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>2</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Допустимое кол-во продуктов в заказе цена доставки = 23 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>2</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Допустимое минимальное кол-во продуктов в заказе цена доставки = 43 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>8</productsCount>\r\n    <productsWeight>5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены отрицательные числа",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>-1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены буквы",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>в</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены спец. символы",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>@</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены десятичные числа с точкой",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1.1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены десятичные числа с запятой",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1,1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Количество продуктов больше допустимого",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>18</productsCount>\r\n    <productsWeight>2,9</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Разрешены десятичные цифры с запятой",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>1,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Допустимый вес в заказе цена доставки = 43 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Минимальный вес в заказе цена доствки = 23 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>0,1</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Допустимый вес в заказе цена доставки = 23 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>2,4</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Минимальный вес в заказе цена доставки = 43 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>2,6</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Максимальный вес в заказе цена доставки = 23 руб.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>2,5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены десятичные числа с точкой Weigh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>1.5</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены отрицательные числа Weigh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>-1</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены буквы Weigh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>кг</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены спец. символы Weigh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>@</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Вес продуктов больше допустимого Weigh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>11</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Допустимое время доставки",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>5.1</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены буквы deliveryTime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>м</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены  десятичные числа с запятой deliveryTime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>10,15</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены  десятичные числа с точкой deliveryTime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>10.15</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрещены спец. символы deliveryTime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>@</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Не допустимое время доставки",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<InputModel>\r\n    <productsCount>1</productsCount>\r\n    <productsWeight>0,5</productsWeight>\r\n    <deliveryTime>23</deliveryTime>\r\n</InputModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"fast-delivery",
+						"v3.1.1",
+						"calculate-delivery.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение списка с корректным ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение списка с не корректным ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/0",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление продуктов с корректным телом",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [\r\n        \r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Передача пустой значения",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [ ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Тело запроса содержит значение null",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": null\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка запроса с не корректным ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 978,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка запроса со строкой в числовой форме",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [\r\n        \r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": \"1\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка запроса с отрицательным числом",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [\r\n        \r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": -4\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка запроса с буквой",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [\r\n        \r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": д\r\n        }\r\n    ]\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка запроса с спец. символом",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [\r\n        \r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": @\r\n        }\r\n    ]\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Кол-во продукта больше чем есть на складе",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productsList\": [\r\n        \r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": 2000\r\n        }\r\n    ]\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление не существующей корзины",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/null",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"null"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка сущности после удаления",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление с корректным параметром",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://83bf8831-5ca1-4697-a7dc-070ec54cfcf7.serverhub.praktikum-services.ru/api/v1/orders/2",
+					"protocol": "https",
+					"host": [
+						"83bf8831-5ca1-4697-a7dc-070ec54cfcf7",
+						"serverhub",
+						"praktikum-services",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
